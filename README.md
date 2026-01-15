@@ -3,10 +3,10 @@ This project applies deep learning to estimate VO2max and other CRF metrics usin
 
 How I used the files:
 
-1. create_fitness_params.py
-   input:
+1. extract_ukbb_labels.py
+   input: INPUT_FILE_PATH = "/cluster/work/grlab/projects/projects2025-dataspectrum4cvd/ukbb/raw/Main/ukb679928.csv"
    output:
-   explanantion: Create .csv files with create create_fitness_params.py.
+   explanation: Create .csv files with create create_fitness_params.py.
    
 2. BP_mean.py
    Special case: blood pressure .csv files were creates with BP_mean.py as teh average of two measurements was calculated.
