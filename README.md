@@ -8,12 +8,12 @@ How I used the files:
    output:
    explanation: Create .csv files with create create_fitness_params.py.
    
-2. BP_mean.py
+3. BP_mean.py
    Special case: blood pressure .csv files were creates with BP_mean.py as teh average of two measurements was calculated.
    
-3. eid_age2_sex_bmi2.csv file was created with sex, age (from instace 2), BMI (from instance 2) from participants with a resting ECG data file from insatnce 2
-4. PCLR embeddings were extracted and saved with create_pclr_emb.py
-5. preprocessing_ep.py
+4. eid_age2_sex_bmi2.csv file was created with sex, age (from instace 2), BMI (from instance 2) from participants with a resting ECG data file from insatnce 2
+5. PCLR embeddings were extracted and saved with create_pclr_emb.py
+6. preprocessing_ep.py
    input:
    output:
    Preprocessing the raw ECG data form insatnce 2. Code modified from Elias Pinter
