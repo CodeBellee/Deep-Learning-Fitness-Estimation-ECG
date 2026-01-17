@@ -1,4 +1,4 @@
-# Deep Learning Fitness Estimation from ECG 🫀
+# Deep Learning Fitness Estimation from ECG
 
 This project applies deep learning to estimate **VO2max** and other **Cardiorespiratory Fitness (CRF)** metrics using resting 12-lead ECG data from ~8,700 UK Biobank participants.
 
@@ -15,7 +15,7 @@ By utilizing pre-trained PCLR (Patient Contrastive Learning of Representations) 
 - [Analysis & Tables](#analysis--tables)
 - [References](#references)
 
-## 🏗 Project Overview
+## Project Overview
 
 The core objective of this repository is to assess the incremental predictive value of adding ECG embeddings to standard clinical variables (Age, Sex, BMI).
 
@@ -23,7 +23,7 @@ The core objective of this repository is to assess the incremental predictive va
 * **Methodology:** Comparative analysis between a "Basic Model" (Demographics only) and a "Full Model" (Demographics + PCLR Embeddings).
 * **Replication:** Includes scripts to replicate the "Deep ECG-VO2" model using weights from *Khurshid et al. (2024)*.
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 ### Data Requirements
 To run these scripts, you need access to:
@@ -38,7 +38,7 @@ To run these scripts, you need access to:
 * Scikit-Learn / XGBoost
 * TableOne (for cohort tables)
 
-## 🚀 Workflow Pipeline
+## Workflow Pipeline
 
 ### 1. Data Extraction
 Extract specific fitness phenotypes and clean the data.
@@ -73,7 +73,7 @@ We train two variations to test hypothesis:
 2.  **`full_model.py` (Deep Learning)**: Trains the same models using Clinical features **+ 320 PCLR ECG embeddings**.
     * *Output:* Saves trained models and generates evaluation metrics ($R$, $R^2$, MAE, RMSE).
 
-## 📊 Analysis & Tables
+## Analysis & Tables
 
 Scripts for generating publication-ready statistics and figures.
 
@@ -84,7 +84,7 @@ Scripts for generating publication-ready statistics and figures.
     * Generates scatter plots (Measured vs. Predicted).
     * Calculates feature importance and incremental $R^2$ improvement.
 
-## 📚 References
+## References
 
 1.  **Deep ECG-VO2:** Khurshid et al., "Deep learned representations of the resting 12-lead electrocardiogram to predict at peak exercise." (2024).
 2.  **PCLR:** [Broad Institute ML4H Model Zoo](https://github.com/broadinstitute/ml4h/tree/master/model_zoo/PCLR).
