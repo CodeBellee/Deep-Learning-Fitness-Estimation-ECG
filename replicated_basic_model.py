@@ -22,9 +22,10 @@ from tensorflow.keras.models import load_model, Model
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from typing import Dict, Any
 
-LABELS_FILE = "/cluster/work/grlab/projects/tmp_imankowski/data/labels/labels_VO2max_instance_1.csv"
+LABELS_FILE = "/cluster/work/grlab/projects/tmp_imankowski/data/labels/real_ukbb_values/30038-1.0.csv"
 AGE2_SEX_BMI2_PATH = "/cluster/work/grlab/projects/tmp_imankowski/data/eid_age2_sex_bmi2.csv"
-OUTPUT_FILE = "/cluster/work/grlab/projects/tmp_imankowski/data/basic_pred_VO2_i1_data_i2.csv"
+OUTPUT_FILE = "/cluster/work/grlab/projects/tmp_imankowski/data/replicated_basic_vo2_predictions.csv"
+
 
 TARGET_LABEL = "30038-1.0"
 
