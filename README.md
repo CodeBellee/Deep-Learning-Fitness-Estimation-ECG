@@ -8,24 +8,29 @@ How I used the files:
    output:
    explanation: Create .csv files with create create_fitness_params.py.
    
-3. BP_mean.py
-   Special case: blood pressure .csv files were creates with BP_mean.py as teh average of two measurements was calculated.
+3. blood_pressure_averager.py
+   Special case: blood pressure CSV files were creates with BP_mean.py as teh average of two measurements was calculated.
    
-4. eid_age2_sex_bmi2.csv file was created with sex, age (from instace 2), BMI (from instance 2) from participants with a resting ECG data file from insatnce 2
-5. PCLR embeddings were extracted and saved with create_pclr_emb.py
-6. preprocessing_ep.py
+4. process_ukbb_demographics.csv file was created with sex, age (from instace 2), BMI (from instance 2) from participants with a resting ECG data file from insatnce 2
+5. extract_pclr_embeddings.py
+   PCLR embeddings were extracted and saved for taining and/or predition.
+   The PCLR encoder is needed for this step. You can find it here: https://github.com/broadinstitute/ml4h/tree/master/model_zoo/PCLR
+   
+7. preprocessing.py
    input:
    output:
-   Preprocessing the raw ECG data form insatnce 2. Code modified from Elias Pinter
+   Preprocessing the raw ECG data form insatnce 2. modified code from Elias Pinter.
 
 Model Replication:
+Hardcoded weights from the paper of Khurshid et al. (2024) were used to predict VO2max of participants of the UK Biobank.
 
 6. Basic Model
-7. Deep VO2 model
+   
+8. Deep VO2 model
 
 Training Models on UK Biobank data:
 
-5. pclr_plus_different_models.py
+5. full_model.py
    input:
    output: a) saves Full Models for all fitness parameters saved in /cluster/work/grlab/projects/tmp_imankowski/models
            b) prints evaluation metrics (r (95 %CI), R^2, MAE, MSE, RMSE)
@@ -35,10 +40,10 @@ Training Models on UK Biobank data:
    The file also generated the evaluation metrics (r (95 %CI), R^2, MAE, MSE, RMSE)
    
 
-6. basic_own_model.py creates a 'Basic Model' (Input: Age, Sex, BMI, 320 ECG embeddings) with the machine learning techniques: Lasso, ElasicNet, XGBoost, MLP
+6. basic_model.py creates a 'Basic Model' (Input: Age, Sex, BMI, 320 ECG embeddings) with the machine learning techniques: Lasso, ElasicNet, XGBoost, MLP
 This file was used to generate the Basic Model for all machine learning techniques for the VO2max evaluation.
 
-Table and Figure generation:
+Tables and Figures:
 
 7. table_eval_fitness_samples.py
    input:
@@ -54,7 +59,8 @@ Diastolic and systolic values are not handeled here and were added manally in ov
 Final formating adjustments were undertaken in overleaf.
 
 9. Figures
-10. Tableone for classic metrics such as age, sex, ethnic background. Instance Priority 2 -> average(1,3) -> 1 -> 0. Data Mixed from instances.
+   
+11. Tableone for classic metrics such as age, sex, ethnic background. Instance Priority 2 -> average(1,3) -> 1 -> 0. Data Mixed from instances.
      Metrics and instance priority inspired from Arjuns Thesis.
-11. tableone_addition_fitness.py
+12. tableone_addition_fitness.py
     Tableone for fitness metrics with trained models and matching instances
