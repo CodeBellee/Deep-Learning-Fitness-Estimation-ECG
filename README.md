@@ -4,7 +4,7 @@ This project applies deep learning to estimate **VO2max** and other **Cardioresp
 
 By utilizing pre-trained PCLR (Patient Contrastive Learning of Representations) embeddings and transfer learning, this framework eliminates the need for costly and risky maximal exercise testing, predicting fitness phenotypes directly from the raw ECG signal and basic clinical demographics.
 
-## 📋 Table of Contents
+## Table of Contents
 - [Project Overview](#project-overview)
 - [Prerequisites](#prerequisites)
 - [Workflow Pipeline](#workflow-pipeline)
@@ -71,11 +71,11 @@ We train two variations to test hypothesis:
 
 1.  **`basic_model.py` (Baseline)**: Trains Lasso, ElasticNet, XGBoost, and MLP models using **only** clinical features (Age, Sex, BMI).
 2.  **`full_model.py` (Deep Learning)**: Trains the same models using Clinical features **+ 320 PCLR ECG embeddings**.
-    * *Output:* Saves trained models and generates evaluation metrics ($R$, $R^2$, MAE, RMSE).
+    * *Output:* Saves trained models and generates evaluation metrics ($R$, $R^2$, MAE, MSE, RMSE).
 
 ## Analysis & Tables
 
-Scripts for generating publication-ready statistics and figures.
+Scripts for generating statistics and figures.
 
 * **`ukbb_ecg_cohort_table1.py`**: Generates "Table 1" (Baseline Characteristics). It uses a specific logic for harmonizing data across instances (Priority: Instance 2 $\rightarrow$ Avg(1,3) $\rightarrow$ 1 $\rightarrow$ 0).
 * **`generate_fitness_summary.py`**: Generates summary statistics ("Table 3.2") for the target fitness metrics.
