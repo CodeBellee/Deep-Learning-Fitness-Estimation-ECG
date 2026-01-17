@@ -14,6 +14,9 @@ Key Features:
 Usage:
     Update the 'EIDS_PATH', 'ECG_PATH', and 'OUT_FOLDER' constants within the 
     script to point to your local data directories before execution.
+
+Original implementation/logic by Elias Pinter.
+Modified for UKBB Instance 2 preprocessing.
 """
 from pathlib import Path
 import csv
