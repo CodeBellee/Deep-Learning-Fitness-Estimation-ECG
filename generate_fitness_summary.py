@@ -49,8 +49,8 @@ FITNESS_TASKS = {
     'Reaction_Time': {'id': '20023-2.0', 'path': os.path.join(LABELS_BASE_DIR, "20023-2.0.csv")},
     'Health_Scale_Today': {'id': '120103-0.0', 'path': os.path.join(LABELS_BASE_DIR, "120103-0.0.csv")},
     'Health_Score_England': {'id': '26413-0.0', 'path': os.path.join(LABELS_BASE_DIR, "26413-0.0.csv")},
-    'Health_Score_Scotland': {'id': '26420-0.0', 'path': os.path.join(LABELS_BASE_DIR, "26420-0.0.csv")},
-    'Health_Score_Wales': {'id': '26430-0.0', 'path': os.path.join(LABELS_BASE_DIR, "26430-0.0.csv")}
+    'Health_Score_Scotland': {'id': '26430-0.0', 'path': os.path.join(LABELS_BASE_DIR, "26430-0.0.csv")},
+    'Health_Score_Wales': {'id': '26420-0.0', 'path': os.path.join(LABELS_BASE_DIR, "26420-0.0.csv")}
 }
 
 DISPLAY_NAMES = {
