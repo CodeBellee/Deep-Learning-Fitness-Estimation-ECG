@@ -8,7 +8,7 @@ Usage:
     1. Update directory paths in the 'CONFIGURATION' section.
     2. Set 'MODEL_STRATEGY' ('BASIC', 'ECG_ONLY', or 'FULL').
     3. Set 'MODEL_USED' ('LASSO', 'XGBOOST', 'MLP', or 'ELASTICNET').
-    4. Uncomment desired UK Biobank field targets in the 'TARGETS_TO_RUN' list.
+    4. Select the desired UK Biobank field targets in the 'TARGETS_TO_RUN' list.
     5. Run the script.
 
 Dependencies:
