@@ -80,7 +80,7 @@ We train variations using a single unified pipeline:
 Scripts for generating statistics and figures.
 
 * **`ukbb_ecg_cohort_table1.py`**: Generates "Table 1" (Baseline Characteristics). It uses a specific logic for harmonizing data across instances (Priority: Instance 2 $\rightarrow$ Avg(1,3) $\rightarrow$ 1 $\rightarrow$ 0).
-* **`generate_fitness_summary.py`**: Generates summary statistics ("Table 3.2") for the target fitness metrics.
+* **`generate_fitness_summary.py`**: Generates summary statistics for the target fitness metrics.
 * **`performance_analysis.py`**: 
     * Compares Basic vs. Full models.
     * Generates scatter plots (Measured vs. Predicted).
