@@ -67,11 +67,13 @@ Extract deep learning features from the ECGs.
 * **`replicated_deep_vo2_model.py`**: Validates the pipeline by applying hardcoded weights from the *Khurshid et al. (2024)* paper to the UKBB cohort to predict VO2max.
 
 #### B. Training New Models
-We train two variations to test hypothesis:
+We train variations using a single unified pipeline:
 
-1.  **`basic_model.py` (Baseline)**: Trains Lasso, ElasticNet, XGBoost, and MLP models using **only** clinical features (Age, Sex, BMI).
-2.  **`full_model.py` (Deep Learning)**: Trains the same models using Clinical features **+ 320 PCLR ECG embeddings**.
-    * *Output:* Saves trained models and generates evaluation metrics ($R$, $R^2$, MAE, MSE, RMSE).
+* **`models.py`**: Trains Lasso, ElasticNet, XGBoost, and MLP models. You can configure the `MODEL_STRATEGY` variable inside the script to run different feature sets:
+    * **BASIC**: Uses only clinical features (Age, Sex, BMI).
+    * **ECG_ONLY**: Uses only the 320 PCLR ECG embeddings.
+    * **FULL**: Uses Clinical features combined with the 320 PCLR ECG embeddings.
+    * *Output:* Saves trained models and generates evaluation metrics (R, R^2, MAE, MSE, RMSE).
 
 ## Analysis & Tables
 
